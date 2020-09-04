@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        button.start-btn {
+            width: 200px;
+            height: 100px;
+            font-size: 36px;
+            margin-left: 210px;
+            border-radius: 20px;
+
+        }
+        .main-content{
+            width: 700px;
+            margin: 0 auto;
+        }
+        h1 {
+            margin-left: 210px;
+        }
+        body{
+            width: 1200px;
+        }
+        button.start-btn:hover{
+            cursor: pointer;
+        }
+        #canvas {
+            border: 1px solid black;
+            background: url('game.png');
+            background-size: 100% 100%;
+        }
+
+    </style>
+</head>
+<body onkeydown="moveObj(event)">
+
+<div class="main-content">
+    <h1> Bouncing Ball Game !!!</h1>
+    <canvas id="canvas" width="700" height="900"></canvas>
+
+    <button class="start-btn btn btn-primary" onclick="ballRun()"> START</button>
+</div>
+<script src="Bar.js"></script>
+<script src="ball.js"></script>
+<script>
+    let bar = new Bar(100,10,300,800,50);
+    let ball = new Ball(350, 300, 10, 5,5);
+    let score=0;
+    bar.draw();
+    const DEFAULT_WIDTH = 700;
+    const DEFAULT_HEIGHT = 900;
+</script>
+</body>
+</html>
