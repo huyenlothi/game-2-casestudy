@@ -29,7 +29,7 @@ let Ball = function(x, y, radius, dx, dy) {
             document.location.reload();
             cancelAnimationFrame(draw);
         }
-        if (score==5) {
+        if (score==10) {
             alert("YOU WIN!!!");
             document.location.reload();
             cancelAnimationFrame(draw);
